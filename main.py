@@ -9,7 +9,9 @@ from pymongo import MongoClient
 import markup as nav
 from mongodb import Finder
 from cultivator import Cultivator
+from ws import keep_alive
 
+keep_alive()
 logging.basicConfig(level=logging.INFO)
 
 API_TOKEN = "5223777026:AAEPnISDdv72oMOshyHx8Lg5nzpBgTGSHtc"
