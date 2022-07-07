@@ -68,6 +68,7 @@ async def cmd_start(message: types.Message):
                 "spiritDefence": body[8],
                 "evade": body[9],
                 "regeneration": body[10],
+                "points": body[11],
 
                 "level": status[0],
                 "exp": status[1],
@@ -134,13 +135,18 @@ async def cmds(message: types.Message):
 Дух. защита: {param[3]}
 Уклонение: {param[4]}
 Регенерация: {param[5]}
+
+Уровень: {param[6]}
+Энергия: {param[7]}
+
+Очки навыков: {param[8]}
 -----------------------------------------
 Пространственное кольцо:
 
 Боевые монеты: {inv[0]}
 Токены: {inv[1]}
 Травы: {inv[2]}
-Руд: {inv[3]}
+Руда: {inv[3]}
 Кожа: {inv[4]}
 Ткань: {inv[5]}
 

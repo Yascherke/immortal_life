@@ -19,6 +19,8 @@ class Cultivator(StatesGroup):
         self.spirit_def
         self.evade
 
+        self.points
+
 #Восстановление частей тела если их пареметр больше 0
         self.regeneration
 
@@ -101,7 +103,9 @@ class Cultivator(StatesGroup):
 
         self.regeneration = randint(1, 25)
 
-        return [self.head, self.torso, self.right_arm, self.left_arm, self.right_leg, self.left_leg, self.power, self.defence, self.spirit_def, self.evade, self.regeneration]
+        self.points = 0
+
+        return [self.head, self.torso, self.right_arm, self.left_arm, self.right_leg, self.left_leg, self.power, self.defence, self.spirit_def, self.evade, self.regeneration, self.points]
 
     def equipment(self):
 

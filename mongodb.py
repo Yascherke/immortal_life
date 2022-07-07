@@ -17,7 +17,7 @@ class Finder:
         for user in users.find({"_id": self.uid}):
             print("User finder done")
 
-        return [user['name'], user['power'], user['defence'], user['spiritDefence'], user['evade'], user['regeneration'], user['level'], user['exp']]
+        return [user['name'], user['power'], user['defence'], user['spiritDefence'], user['evade'], user['regeneration'], user['level'], user['exp'], user['points']]
 
     def findUserBodyByID(self):
         for user in users.find({"_id": self.uid}):
