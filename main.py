@@ -9,9 +9,11 @@ from pymongo import MongoClient
 import markup as nav
 from mongodb import Finder
 from cultivator import Cultivator
-from ws import keep_alive
+#from ws import keep_alive
 
-keep_alive()
+#keep_alive()
+from system import System
+
 logging.basicConfig(level=logging.INFO)
 
 API_TOKEN = "5223777026:AAEPnISDdv72oMOshyHx8Lg5nzpBgTGSHtc"
@@ -113,11 +115,15 @@ async def cmd_start(message: types.Message):
 async def cmds(message: types.Message):
     uid = message.from_user.id
     finder = Finder(uid)
+    system = System(uid)
     param = finder.findUserParamByID()
     body = finder.findUserBodyByID()
     inv = finder.findUserInventoryByID()
     ma = finder.findUserMartialSkillsByID()
     sr = finder.findUserSpiritualRootByID()
+
+    for cult in cultivation.find({"_id": param[6]}):
+        print("Cult finder done")
 
     if message.text == 'Профиль':
         await message.delete()
@@ -138,7 +144,7 @@ async def cmds(message: types.Message):
 Уклонение: {param[4]}
 Регенерация: {param[5]}
 
-Уровень: {param[6]}
+Уровень: {cult['name']}
 Энергия: {param[7]}
 
 Очки навыков: {param[8]}
@@ -186,6 +192,15 @@ async def cmds(message: types.Message):
         Тьма: {sr[7]}
         -----------------------------------------
         """, reply_markup=nav.profileBack)
+
+    if message.text == "Прорваться":
+        await message.delete()
+        levelUp = system.levelUp()
+        if levelUp == True:
+            await message.answer("Вы успешно прорвались на новый уровень")
+        else:
+            await message.answer("Недостаточно энергии")
+
 
 
 if __name__ == '__main__':
