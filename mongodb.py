@@ -39,13 +39,17 @@ class Finder:
 
     def findUserMartialSkillsByID(self):
         for user in users.find({"_id": self.uid}):
-            print("Inventory finder done")
+            print("Martial finder done")
 
         return [user['blade'], user['spear'], user['sword'], user['fist'], user['palm'], user['finger']]
 
     def findUserSpiritualRootByID(self):
         for user in users.find({"_id": self.uid}):
-            print("Inventory finder done")
+            print("Spiritual finder done")
 
         return [user['fire'], user['water'], user['lightning'], user['wind'], user['earth'], user['wood'], user['light'], user["dark"]]
 
+    def findParamByName(self, name):
+        for user in users.find({"name": name}):
+            print("Name param finder done")
+        return [user['name'], user['power'], user['defence'], user['spiritDefence'], user['evade'], user['regeneration'], user['level'], user['exp'], user['points']]

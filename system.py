@@ -14,6 +14,7 @@ class System(StatesGroup):
     def __init__(self, uid):
         self.uid = uid
 
+
     def levelUp(self):
         finder = Finder(self.uid)
         user = finder.findUserParamByID()
@@ -30,6 +31,14 @@ class System(StatesGroup):
             users.update_one({"_id": self.uid}, {"$set": {"level": user[6] + 1}})
             users.update_one({"_id": self.uid}, {"$set": {"points": user[8] + 5}})
             return True
+
+    def send_exp(self, msg):
+        finder = Finder(self.uid)
+        getter = msg.replace(' для ', ',').split(',')
+        user = finder.findParamByName(getter[1])
+        exp = int(getter[0])
+        users.update_one({"name": getter[1]}, {"$set": {"exp": user[7] + exp}})
+
 
 
 

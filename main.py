@@ -110,6 +110,20 @@ async def cmd_start(message: types.Message):
         await asyncio.sleep(1)
         await message.answer(f'Рад знакомству!')
 
+@dp.message_handler(commands=['награда'])
+async def sendexp(message: types.Message):
+    uid = message.from_user.id
+    finder = Finder(uid)
+    system = System(uid)
+    user = finder.findUserParamByID()
+    msg = message.get_args()
+    getter = msg.replace(' для ', ',').split(',')
+    msg = message.get_args()
+    exp = int(getter[0])
+    system.send_exp(msg)
+    await message.answer(f"{getter[1]} получил {exp} очков энергии от {user[0]}")
+
+
 
 @dp.message_handler()
 async def cmds(message: types.Message):
