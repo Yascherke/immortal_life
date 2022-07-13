@@ -248,56 +248,56 @@ class System(StatesGroup):
 
 
             if skill == "Алхимия":
-                if craft[0] < 100 and count <= 100:
+                if craft[0] < 50 and count <= 50:
                     users.update_one({"_id": self.uid}, {"$set": {"alchemy": craft[0] + count}})
                     users.update_one({"_id": self.uid}, {"$set": {"points": user[8] - count}})
                     points = user[8] - count
                     num = craft[0] + count
-                    if num > 100:
-                        res = num - 100
-                        users.update_one({"_id": self.uid}, {"$set": {"alchemy": 100}})
+                    if num > 50:
+                        res = num - 50
+                        users.update_one({"_id": self.uid}, {"$set": {"alchemy": 50}})
                         users.update_one({"_id": self.uid}, {"$set": {"points": points + res}})
                     return True
                 else:
                     return False
 
             if skill == "Крафтер":
-                if craft[1] < 100 and count <= 100:
+                if craft[1] < 50 and count <= 50:
                     users.update_one({"_id": self.uid}, {"$set": {"forge": craft[1] + count}})
                     users.update_one({"_id": self.uid}, {"$set": {"points": user[8] - count}})
                     points = user[8] - count
                     num = craft[1] + count
-                    if num > 100:
-                        res = num - 100
-                        users.update_one({"_id": self.uid}, {"$set": {"forge": 100}})
+                    if num > 50:
+                        res = num - 50
+                        users.update_one({"_id": self.uid}, {"$set": {"forge": 50}})
                         users.update_one({"_id": self.uid}, {"$set": {"points": points + res}})
                     return True
                 else:
                     return False
 
             if skill == "Сбор трав":
-                if craft[2] < 100 and count <= 100:
+                if craft[2] < 50 and count <= 50:
                     users.update_one({"_id": self.uid}, {"$set": {"herbCollection": craft[2] + count}})
                     users.update_one({"_id": self.uid}, {"$set": {"points": user[8] - count}})
                     points = user[8] - count
                     num = craft[2] + count
-                    if num > 100:
-                        res = num - 100
-                        users.update_one({"_id": self.uid}, {"$set": {"herbCollection": 100}})
+                    if num > 50:
+                        res = num - 50
+                        users.update_one({"_id": self.uid}, {"$set": {"herbCollection": 50}})
                         users.update_one({"_id": self.uid}, {"$set": {"points": points + res}})
                     return True
                 else:
                     return False
 
             if skill == "Сбор руды":
-                if craft[3] < 100 and count <= 100:
+                if craft[3] < 50 and count <= 50:
                     users.update_one({"_id": self.uid}, {"$set": {"mining": craft[3] + count}})
                     users.update_one({"_id": self.uid}, {"$set": {"points": user[8] - count}})
                     points = user[8] - count
                     num = craft[3] + count
-                    if num > 100:
-                        res = num - 100
-                        users.update_one({"_id": self.uid}, {"$set": {"mining": 100}})
+                    if num > 50:
+                        res = num - 50
+                        users.update_one({"_id": self.uid}, {"$set": {"mining": 50}})
                         users.update_one({"_id": self.uid}, {"$set": {"points": points + res}})
                     return True
                 else:
