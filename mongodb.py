@@ -53,3 +53,10 @@ class Finder:
         for user in users.find({"name": name}):
             print("Name param finder done")
         return [user['name'], user['power'], user['defence'], user['spiritDefence'], user['evade'], user['regeneration'], user['level'], user['exp'], user['points']]
+
+    def findUserCraftByID(self):
+        for user in users.find({"_id": self.uid}):
+            print("Craft finder done")
+
+        return [user['alchemy'], user['forge'], user['herbCollection'], user['mining']]
+

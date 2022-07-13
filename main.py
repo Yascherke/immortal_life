@@ -123,6 +123,19 @@ async def sendexp(message: types.Message):
     system.sendExp(msg)
     await message.answer(f"{getter[1]} получил {exp} очков энергии от {user[0]}")
 
+@dp.message_handler(commands=['улучшить'])
+async def upgrade(message: types.Message):
+    uid = message.from_user.id
+    system = System(uid)
+    msg = message.get_args()
+    getter = msg.replace(' на ', ',').split(',')
+    msg = message.get_args()
+    exp = int(getter[1])
+    if system.upgradeSkill(msg):
+        await message.answer(f"Навык {getter[0]} повысился на {exp} очков навыков")
+    else:
+        await message.answer(f"У вас не хватает очков навыков либо навык полностью изучен")
+
 
 
 @dp.message_handler()
@@ -135,6 +148,7 @@ async def cmds(message: types.Message):
     inv = finder.findUserInventoryByID()
     ma = finder.findUserMartialSkillsByID()
     sr = finder.findUserSpiritualRootByID()
+    craft = finder.findUserCraftByID()
 
     for cult in cultivation.find({"_id": param[6]}):
         print("Cult finder done")
@@ -199,6 +213,14 @@ async def cmds(message: types.Message):
         Ветер: {sr[3]}
         Земля: {sr[4]}
         Дерево: {sr[5]}
+        -----------------------------------------
+        Ремесло:
+        
+        Алхимия: {craft[0]}
+        Крафтер: {craft[1]}
+        Сбор трав: {craft[2]}
+        Сбор руды: {craft[3]}
+        
         -----------------------------------------
         Мировые принципы:
 
