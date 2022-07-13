@@ -120,7 +120,7 @@ async def sendexp(message: types.Message):
     getter = msg.replace(' для ', ',').split(',')
     msg = message.get_args()
     exp = int(getter[0])
-    system.send_exp(msg)
+    system.sendExp(msg)
     await message.answer(f"{getter[1]} получил {exp} очков энергии от {user[0]}")
 
 
