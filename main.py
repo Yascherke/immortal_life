@@ -122,6 +122,7 @@ async def sendexp(message: types.Message):
     exp = int(getter[0])
     system.sendExp(msg)
     await message.answer(f"{getter[1]} получил {exp} очков энергии от {user[0]}")
+    await message.delete()
 
 @dp.message_handler(commands=['улучшить'])
 async def upgrade(message: types.Message):
