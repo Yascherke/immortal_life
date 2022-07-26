@@ -96,7 +96,7 @@ class Cultivator(StatesGroup):
         self.left_leg = 100
         self.right_leg = 100
 
-        self.power = randint(1, 5)
+        self.power = randint(2, 5)
         self.defence = 0
         self.spirit_def = 0
         self.evade = randint(1, 10)

@@ -7,6 +7,7 @@ from aiogram.utils import executor
 from pymongo import MongoClient
 
 import markup as nav
+from fight import Battle
 from mongodb import Finder
 from cultivator import Cultivator
 #from ws import keep_alive
@@ -124,6 +125,20 @@ async def sendexp(message: types.Message):
     await message.answer(f"{getter[1]} получил {exp} очков энергии от {user[0]}")
     await message.delete()
 
+@dp.message_handler(commands=['ударить'])
+async def battle(message: types.Message):
+    uid = message.from_user.id
+    finder = Finder(uid)
+    battle = Battle(uid)
+    user = finder.findUserParamByID()
+    msg = message.get_args()
+    getter = msg.replace(' в ', ',').split(',')
+    res = battle.fight(getter)
+    if res != False:
+        await message.answer(f"{getter[0]} получил урон в {getter[1]} на {res[0]} единиц от {user[0]} \nЗдоровья осталось: {res[1]} \nЗдоровья похищенно: {res[2]}")
+    else:
+        await message.answer("Цель уклонилась")
+
 @dp.message_handler(commands=['улучшить'])
 async def upgrade(message: types.Message):
     uid = message.from_user.id
@@ -136,7 +151,6 @@ async def upgrade(message: types.Message):
         await message.answer(f"Навык {getter[0]} повысился на {exp} очков навыков")
     else:
         await message.answer(f"У вас не хватает очков навыков либо навык полностью изучен")
-
 
 
 @dp.message_handler()

@@ -1,4 +1,4 @@
-from aiogram.dispatcher.filters.state import State, StatesGroup
+#from aiogram.dispatcher.filters.state import State, StatesGroup
 from pymongo import MongoClient
 from mongodb import Finder
 
@@ -9,7 +9,7 @@ users = db["players"]
 sects = db["sects"]
 cultiv = db["cultivation"]
 
-class System(StatesGroup):
+class System():
 
     def __init__(self, uid):
         self.uid = uid
@@ -38,6 +38,8 @@ class System(StatesGroup):
         user = finder.findParamByName(getter[1])
         exp = int(getter[0])
         users.update_one({"name": getter[1]}, {"$set": {"exp": user[7] + exp}})
+    
+
 
     def upgradeSkill(self, msg):
         finder = Finder(self.uid)
@@ -304,6 +306,8 @@ class System(StatesGroup):
                     return False
         else:
             return False
+
+
 
 
 
