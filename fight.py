@@ -440,23 +440,23 @@ class Battle:
             if spiritual[6] >= 5 and spiritual[6] < 20:
                 attack += param[1] * 2
             if spiritual[6] >= 20 and spiritual[6] < 30:
-                attack += param[1] * 2
+                attack += param[1] * 3
             if spiritual[6] >= 30 and spiritual[6] < 40:
                 attack += param[1] * 5
             if spiritual[6] >= 40 and spiritual[6] < 50:
-                attack += param[1] * 5
+                attack += param[1] * 7
             if spiritual[6] >= 50 and spiritual[6] < 60:
-                attack += param[1] * 5
+                attack += param[1] * 9
             if spiritual[6] >= 60 and spiritual[6] < 70:
-                attack += param[1] * 5
+                attack += param[1] * 10
             if spiritual[6] >= 70 and spiritual[6] < 80:
-                attack += param[1] * 6
+                attack += param[1] * 12
             if spiritual[6] >= 80 and spiritual[6] < 90:
-                attack += param[1] * 6
+                attack += param[1] * 14
             if spiritual[6] >= 90 and spiritual[6] < 100:
-                attack += param[1] * 6
+                attack += param[1] * 16
             if spiritual[6] == 100:
-                attack += param[1] * 8
+                attack += param[1] * 18
 
 
             #Dark
