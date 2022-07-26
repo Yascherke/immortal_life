@@ -484,7 +484,8 @@ class Battle:
             if rand >= evade:
                 if aim == "Голова":
                     head = enBody[0] - attack
-                    users.update_one({"_id": enId}, {"$set": {"head": enBody[0] - attack}})
+
+                    users.update_one({"_id": enId}, {"$set": {"head": round(head)}})
                     users.update_one({"_id": self.uid}, {"$set": {"head": body[0] + heal}})
                     if lvl <= 11 and body[0] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"head": 100}})
@@ -495,14 +496,14 @@ class Battle:
                     if lvl > 11 and lvl <= 23 and body[0] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"head": 200}})
                         return [attack, head, heal]
-                    if enBody[0] <= 0:
+                    if enBody[0] <= 0 or attack >= enBody[0]:
                         users.update_one({"_id": enId}, {"$set": {"head": 1}})
                         return [attack, 1, heal]
                     return [attack, head, heal]
 
                 if aim == "Торс":
                     torso = enBody[1] - attack
-                    users.update_one({"_id": enId}, {"$set": {"torso": enBody[1] - attack}})
+                    users.update_one({"_id": enId}, {"$set": {"torso": round(torso)}})
                     users.update_one({"_id": self.uid}, {"$set": {"torso": body[1] + heal}})
                     if lvl <= 11 and body[1] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"torso": 100}})
@@ -513,14 +514,14 @@ class Battle:
                     if lvl > 11 and lvl <= 23 and body[1] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"torso": 200}})
                         return [attack, torso, heal]
-                    if enBody[1] <= 0:
+                    if enBody[1] <= 0 or attack >= enBody[1]:
                         users.update_one({"_id": enId}, {"$set": {"torso": 1}})
                         return [attack, 1, heal]
                     return [attack, torso, heal]
 
                 if aim == "Пр. рука":
                     ra = enBody[2] - attack
-                    users.update_one({"_id": enId}, {"$set": {"rightArm": enBody[2] - attack}})
+                    users.update_one({"_id": enId}, {"$set": {"rightArm":   round(ra)}})
                     users.update_one({"_id": self.uid}, {"$set": {"rightArm": body[2] + heal}})
                     if lvl <= 11 and body[2] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"rightArm": 100}})
@@ -531,14 +532,14 @@ class Battle:
                     if lvl > 11 and lvl <= 23 and body[2] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"rightArm": 200}})
                         return [attack, ra, heal]
-                    if enBody[2] <= 0:
+                    if enBody[2] <= 0 or attack >= enBody[2]:
                         users.update_one({"_id": enId}, {"$set": {"rightArm": 1}})
                         return [attack, 1, heal]
                     return [attack, ra, heal]
 
                 if aim == "Лв. рука":
                     la = enBody[3] - attack
-                    users.update_one({"_id": enId}, {"$set": {"leftArm": enBody[3] - attack}})
+                    users.update_one({"_id": enId}, {"$set": {"leftArm": round(la)}})
                     users.update_one({"_id": self.uid}, {"$set": {"leftArm": body[3] + heal}})
                     if lvl <= 11 and body[3] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"leftArm": 100}})
@@ -549,14 +550,14 @@ class Battle:
                     if lvl > 11 and lvl <= 23 and body[3] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"leftArm": 200}})
                         return [attack, la, heal]
-                    if enBody[3] <= 0:
+                    if enBody[3] <= 0 or attack >= enBody[3]:
                         users.update_one({"_id": enId}, {"$set": {"leftArm": 1}})
                         return [attack, 1, heal]
                     return [attack, la, heal]
 
                 if aim == "Пр. нога":
                     rl = enBody[4] - attack
-                    users.update_one({"_id": enId}, {"$set": {"rightLeg": enBody[4] - attack}})
+                    users.update_one({"_id": enId}, {"$set": {"rightLeg": round(rl)}})
                     users.update_one({"_id": self.uid}, {"$set": {"rightLeg": body[4] + heal}})
                     if lvl <= 11 and body[4] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"rightLeg": 100}})
@@ -567,14 +568,14 @@ class Battle:
                     if lvl > 11 and lvl <= 23 and body[4] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"rightLeg": 200}})
                         return [attack, rl, heal]
-                    if enBody[4] <= 0:
+                    if enBody[4] <= 0 or attack >= enBody[4]:
                         users.update_one({"_id": enId}, {"set": {"rightLeg": 1}})
                         return [attack, 1, heal]
                     return [attack, rl, heal]
 
                 if aim == "Лв. нога":
                     ll = enBody[5] - attack
-                    users.update_one({"_id": enId}, {"$set": {"leftLeg": enBody[5] - attack}})
+                    users.update_one({"_id": enId}, {"$set": {"leftLeg": round(ll)}})
                     users.update_one({"_id": self.uid}, {"$set": {"leftLeg": body[5] + heal}})
                     if lvl <= 11 and body[5] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"leftLeg": 100}})
@@ -585,7 +586,7 @@ class Battle:
                     if lvl > 11 and lvl <= 23 and body[5] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"leftLeg": 200}})
                         return [attack, ll, heal]
-                    if enBody[5] <= 0:
+                    if enBody[5] <= 0 or attack >= enBody[5]:
                         users.update_one({"_id": enId}, {"$set": {"leftLeg": 1}})
                         return [attack, 1, heal]
                     return [attack, ll, heal]
