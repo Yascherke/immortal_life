@@ -45,7 +45,7 @@ class Battle:
             rand = randint(1, 20)
 
             #Blade
-            if martial[0] >= 10 and martial[0] < 20:
+            if martial[0] >= 5 and martial[0] < 20:
                 attack += param[1] * 0.1 * 10
                 attack -= attack * martdef
             if martial[0] >= 20 and martial[0] < 30:
@@ -85,7 +85,7 @@ class Battle:
                 heal += attack
 
             #Spear
-            if martial[1] >= 10 and martial[1] < 20:
+            if martial[1] >= 5 and martial[1] < 20:
                 attack += param[1] * 0.3
                 attack -= attack * (martdef - 0.1)
             if martial[1] >= 20 and martial[1] < 30:
@@ -117,7 +117,7 @@ class Battle:
                 attack -= attack * (martdef - 0.7)
 
             #Sword
-            if martial[2] >= 10 and martial[2] < 20:
+            if martial[2] >= 5 and martial[2] < 20:
                 attack += param[1] * 0.4
                 attack -= attack * martdef
             if martial[2] >= 20 and martial[2] < 30:
@@ -149,7 +149,7 @@ class Battle:
                 attack -= attack * martdef
 
             #Fist
-            if martial[3] >= 10 and martial[3] < 20:
+            if martial[3] >= 5 and martial[3] < 20:
                 attack += param[1] * 5
                 attack -= attack * martdef
             if martial[3] >= 20 and martial[3] < 30:
@@ -181,7 +181,7 @@ class Battle:
                 attack -= attack * martdef
 
             #Palm
-            if martial[4] >= 10 and martial[4] < 20:
+            if martial[4] >= 5 and martial[4] < 20:
                 attack += param[1] * 3
                 attack -= attack * martdef
             if martial[4] >= 20 and martial[4] < 30:
@@ -213,7 +213,7 @@ class Battle:
                 attack -= attack * martdef
 
             #Finger
-            if martial[5] >= 10 and martial[5] < 20:
+            if martial[5] >= 5 and martial[5] < 20:
                 attack += param[1] * 2
                 attack -= attack * (martdef - 1)
             if martial[5] >= 20 and martial[5] < 30:
@@ -245,7 +245,7 @@ class Battle:
                 attack -= attack * (martdef - 2)
 
             #Fire
-            if spiritual[0] >= 10 and spiritual[0] < 20:
+            if spiritual[0] >= 5 and spiritual[0] < 20:
                 attack += param[1] * 1.5
                 attack -= attack * spiritdef
             if spiritual[0] >= 20 and spiritual[0] < 30:
@@ -277,7 +277,7 @@ class Battle:
                 attack -= attack * spiritdef
 
             #Water
-            if spiritual[1] >= 10 and spiritual[1] < 20:
+            if spiritual[1] >= 5 and spiritual[1] < 20:
                 attack += param[1] * 1.5
                 attack -= attack * spiritdef
             if spiritual[1] >= 20 and spiritual[1] < 30:
@@ -309,7 +309,7 @@ class Battle:
                 attack -= attack * spiritdef
 
             #lightning
-            if spiritual[2] >= 10 and spiritual[2] < 20:
+            if spiritual[2] >= 5 and spiritual[2] < 20:
                 attack += param[1] * 1.5
                 attack -= attack * spiritdef
             if spiritual[2] >= 20 and spiritual[2] < 30:
@@ -341,7 +341,7 @@ class Battle:
                 attack -= attack * spiritdef
 
             #Wind
-            if spiritual[3] >= 10 and spiritual[3] < 20:
+            if spiritual[3] >= 5 and spiritual[3] < 20:
                 attack += param[1] * 1.5
                 attack -= attack * spiritdef
             if spiritual[3] >= 20 and spiritual[3] < 30:
@@ -373,7 +373,7 @@ class Battle:
                 attack -= attack * spiritdef
 
             #Earth
-            if spiritual[4] >= 10 and spiritual[4] < 20:
+            if spiritual[4] >= 5 and spiritual[4] < 20:
                 attack += param[1] * 1
                 attack -= attack * spiritdef
             if spiritual[4] >= 20 and spiritual[4] < 30:
@@ -405,7 +405,7 @@ class Battle:
                 attack -= attack * spiritdef
 
             #Wood
-            if spiritual[5] >= 10 and spiritual[5] < 20:
+            if spiritual[5] >= 5 and spiritual[5] < 20:
                 attack += param[1] * 1
                 attack -= attack * spiritdef
             if spiritual[5] >= 20 and spiritual[5] < 30:
@@ -437,7 +437,7 @@ class Battle:
                 attack -= attack * spiritdef
 
             #Light
-            if spiritual[6] >= 10 and spiritual[6] < 20:
+            if spiritual[6] >= 5 and spiritual[6] < 20:
                 attack += param[1] * 2
             if spiritual[6] >= 20 and spiritual[6] < 30:
                 attack += param[1] * 2
@@ -460,7 +460,7 @@ class Battle:
 
 
             #Dark
-            if spiritual[7] >= 10 and spiritual[7] < 20:
+            if spiritual[7] >= 5 and spiritual[7] < 20:
                 attack += param[1] * 2
             if spiritual[7] >= 20 and spiritual[7] < 30:
                 attack += param[1] * 4
