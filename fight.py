@@ -118,31 +118,31 @@ class Battle:
 
             #Sword
             if martial[2] >= 5 and martial[2] < 20:
-                attack += param[1] * 0.4
+                attack += param[1] * 0.4 * 10
                 attack -= attack * martdef
             if martial[2] >= 20 and martial[2] < 30:
-                attack += param[1] * 0.4
+                attack += param[1] * 0.4 * 10
                 attack -= attack * martdef
             if martial[2] >= 30 and martial[2] < 40:
-                attack += param[1] * 0.6
+                attack += param[1] * 0.6 * 10
                 attack -= attack * martdef
             if martial[2] >= 40 and martial[2] < 50:
-                attack += param[1] * 0.6
+                attack += param[1] * 0.6 * 10
                 attack -= attack * martdef
             if martial[2] >= 50 and martial[2] < 60:
-                attack += param[1] * 0.6
+                attack += param[1] * 0.6 * 10
                 attack -= attack * martdef
             if martial[2] >= 60 and martial[2] < 70:
-                attack += param[1] * 0.8
+                attack += param[1] * 0.8 * 10
                 attack -= attack * martdef
             if martial[2] >= 70 and martial[2] < 80:
-                attack += param[1] * 0.8
+                attack += param[1] * 0.8 * 10
                 attack -= attack * martdef
             if martial[2] >= 80 and martial[2] < 90:
-                attack += param[1] * 0.8
+                attack += param[1] * 0.8 * 10
                 attack -= attack * martdef
             if martial[2] >= 90 and martial[2] < 100:
-                attack += param[1] * 0.8
+                attack += param[1] * 0.8 * 10
                 attack -= attack * martdef
             if martial[2] == 100:
                 attack += param[1] * 2 * 10
@@ -156,16 +156,16 @@ class Battle:
                 attack += param[1] * 5
                 attack -= attack * martdef
             if martial[3] >= 30 and martial[3] < 40:
-                attack += param[1] * 5
+                attack += param[1] * 7
                 attack -= attack * martdef
             if martial[3] >= 40 and martial[3] < 50:
-                attack += param[1] * 5
+                attack += param[1] * 7
                 attack -= attack * martdef
             if martial[3] >= 50 and martial[3] < 60:
-                attack += param[1] * 10
+                attack += param[1] * 7
                 attack -= attack * martdef
             if martial[3] >= 60 and martial[3] < 70:
-                attack += param[1] * 10
+                attack += param[1] * 7
                 attack -= attack * martdef
             if martial[3] >= 70 and martial[3] < 80:
                 attack += param[1] * 10
@@ -174,10 +174,10 @@ class Battle:
                 attack += param[1] * 10
                 attack -= attack * martdef
             if martial[3] >= 90 and martial[3] < 100:
-                attack += param[1] * 10
+                attack += param[1] * 15
                 attack -= attack * martdef
             if martial[3] == 100:
-                attack += param[1] * 40
+                attack += param[1] * 25
                 attack -= attack * martdef
 
             #Palm
@@ -241,7 +241,7 @@ class Battle:
                 attack += param[1] * 6
                 attack -= attack * (martdef - 1)
             if martial[5] == 100:
-                attack += param[1] * 10
+                attack += param[1] * 8
                 attack -= attack * (martdef - 2)
 
             #Fire
@@ -290,13 +290,13 @@ class Battle:
                 attack += param[1] * 2.5
                 attack -= attack * spiritdef
             if spiritual[1] >= 50 and spiritual[1] < 60:
-                attack += param[1] * 5
+                attack += param[1] * 4
                 attack -= attack * spiritdef
             if spiritual[1] >= 60 and spiritual[1] < 70:
                 attack += param[1] * 5
                 attack -= attack * spiritdef
             if spiritual[1] >= 70 and spiritual[1] < 80:
-                attack += param[1] * 7
+                attack += param[1] * 6
                 attack -= attack * spiritdef
             if spiritual[1] >= 80 and spiritual[1] < 90:
                 attack += param[1] * 7
@@ -325,16 +325,16 @@ class Battle:
                 attack += param[1] * 5
                 attack -= attack * spiritdef
             if spiritual[2] >= 60 and spiritual[2] < 70:
-                attack += param[1] * 6
+                attack += param[1] * 5
                 attack -= attack * spiritdef
             if spiritual[2] >= 70 and spiritual[2] < 80:
-                attack += param[1] * 7
+                attack += param[1] * 6
                 attack -= attack * spiritdef
             if spiritual[2] >= 80 and spiritual[2] < 90:
-                attack += param[1] * 8
+                attack += param[1] * 7
                 attack -= attack * spiritdef
             if spiritual[2] >= 90 and spiritual[2] < 100:
-                attack += param[1] * 9
+                attack += param[1] * 8
                 attack -= attack * spiritdef
             if spiritual[2] == 100:
                 attack += param[1] * 15
@@ -383,25 +383,25 @@ class Battle:
                 attack += param[1] * 2
                 attack -= attack * spiritdef
             if spiritual[4] >= 40 and spiritual[4] < 50:
-                attack += param[1] * 2
+                attack += param[1] * 3
                 attack -= attack * spiritdef
             if spiritual[4] >= 50 and spiritual[4] < 60:
-                attack += param[1] * 4
+                attack += param[1] * 5
                 attack -= attack * spiritdef
             if spiritual[4] >= 60 and spiritual[4] < 70:
-                attack += param[1] * 4
+                attack += param[1] * 6
                 attack -= attack * spiritdef
             if spiritual[4] >= 70 and spiritual[4] < 80:
-                attack += param[1] * 8
+                attack += param[1] * 7
                 attack -= attack * spiritdef
             if spiritual[4] >= 80 and spiritual[4] < 90:
-                attack += param[1] * 8
+                attack += param[1] * 7
                 attack -= attack * spiritdef
             if spiritual[4] >= 90 and spiritual[4] < 100:
-                attack += param[1] * 12
+                attack += param[1] * 10
                 attack -= attack * spiritdef
             if spiritual[4] == 100:
-                attack += param[1] * 15
+                attack += param[1] * 12
                 attack -= attack * spiritdef
 
             #Wood
@@ -484,111 +484,116 @@ class Battle:
             if rand >= evade:
                 if aim == "Голова":
                     head = enBody[0] - attack
-
+                    headh = body[0] + heal
                     users.update_one({"_id": enId}, {"$set": {"head": round(head)}})
-                    users.update_one({"_id": self.uid}, {"$set": {"head": body[0] + heal}})
+                    users.update_one({"_id": self.uid}, {"$set": {"head": round(headh)}})
                     if lvl <= 11 and body[0] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"head": 100}})
-                        return [attack, head, heal]
+                        return [attack, round(head), round(headh)]
                     if lvl > 11 and lvl <= 17 and body[0] > 150:
                         users.update_one({"_id": self.uid}, {"$set": {"head": 150}})
-                        return [attack, head, heal]
+                        return [attack, round(head), round(headh)]
                     if lvl > 11 and lvl <= 23 and body[0] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"head": 200}})
-                        return [attack, head, heal]
+                        return [attack, round(head), round(headh)]
                     if enBody[0] <= 0 or attack >= enBody[0]:
                         users.update_one({"_id": enId}, {"$set": {"head": 1}})
-                        return [attack, 1, heal]
-                    return [attack, head, heal]
+                        return [attack, 1, round(headh)]
+                    return [attack, round(head), round(headh)]
 
                 if aim == "Торс":
                     torso = enBody[1] - attack
+                    torsoh = body[1] + heal
                     users.update_one({"_id": enId}, {"$set": {"torso": round(torso)}})
-                    users.update_one({"_id": self.uid}, {"$set": {"torso": body[1] + heal}})
+                    users.update_one({"_id": self.uid}, {"$set": {"torso": round(torsoh)}})
                     if lvl <= 11 and body[1] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"torso": 100}})
-                        return [attack, torso, heal]
+                        return [attack, round(torso), round(torsoh)]
                     if lvl > 11 and lvl <= 17 and body[1] > 150:
                         users.update_one({"_id": self.uid}, {"$set": {"torso": 150}})
-                        return [attack, torso, heal]
+                        return [attack, round(torso), round(torsoh)]
                     if lvl > 11 and lvl <= 23 and body[1] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"torso": 200}})
-                        return [attack, torso, heal]
+                        return [attack, round(torso), round(torsoh)]
                     if enBody[1] <= 0 or attack >= enBody[1]:
                         users.update_one({"_id": enId}, {"$set": {"torso": 1}})
-                        return [attack, 1, heal]
-                    return [attack, torso, heal]
+                        return [attack, 1, round(torsoh)]
+                    return [attack, round(torso), round(torsoh)]
 
                 if aim == "Пр. рука":
                     ra = enBody[2] - attack
+                    rah = body[2] + heal
                     users.update_one({"_id": enId}, {"$set": {"rightArm":   round(ra)}})
-                    users.update_one({"_id": self.uid}, {"$set": {"rightArm": body[2] + heal}})
+                    users.update_one({"_id": self.uid}, {"$set": {"rightArm": round(rah)}})
                     if lvl <= 11 and body[2] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"rightArm": 100}})
-                        return [attack, ra, heal]
+                        return [attack, round(ra), round(rah)]
                     if lvl > 11 and lvl <= 17 and body[2] > 150:
                         users.update_one({"_id": self.uid}, {"$set": {"rightArm": 150}})
                         return [attack, ra, heal]
                     if lvl > 11 and lvl <= 23 and body[2] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"rightArm": 200}})
-                        return [attack, ra, heal]
+                        return [attack, round(ra), round(rah)]
                     if enBody[2] <= 0 or attack >= enBody[2]:
                         users.update_one({"_id": enId}, {"$set": {"rightArm": 1}})
-                        return [attack, 1, heal]
-                    return [attack, ra, heal]
+                        return [attack, 1, round(rah)]
+                    return [attack, round(ra), round(rah)]
 
                 if aim == "Лв. рука":
                     la = enBody[3] - attack
+                    lah = body[3] + heal
                     users.update_one({"_id": enId}, {"$set": {"leftArm": round(la)}})
-                    users.update_one({"_id": self.uid}, {"$set": {"leftArm": body[3] + heal}})
+                    users.update_one({"_id": self.uid}, {"$set": {"leftArm": round(lah)}})
                     if lvl <= 11 and body[3] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"leftArm": 100}})
-                        return [attack, la, heal]
+                        return [attack,  round(la), round(lah)]
                     if lvl > 11 and lvl <= 17 and body[3] > 150:
                         users.update_one({"_id": self.uid}, {"$set": {"leftArm": 150}})
-                        return [attack, la, heal]
+                        return [attack,  round(la), round(lah)]
                     if lvl > 11 and lvl <= 23 and body[3] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"leftArm": 200}})
-                        return [attack, la, heal]
+                        return [attack,  round(la), round(lah)]
                     if enBody[3] <= 0 or attack >= enBody[3]:
                         users.update_one({"_id": enId}, {"$set": {"leftArm": 1}})
-                        return [attack, 1, heal]
-                    return [attack, la, heal]
+                        return [attack, 1, round(lah)]
+                    return [attack,  round(la), round(lah)]
 
                 if aim == "Пр. нога":
                     rl = enBody[4] - attack
+                    rlh = body[4] + heal
                     users.update_one({"_id": enId}, {"$set": {"rightLeg": round(rl)}})
-                    users.update_one({"_id": self.uid}, {"$set": {"rightLeg": body[4] + heal}})
+                    users.update_one({"_id": self.uid}, {"$set": {"rightLeg": round(rlh)}})
                     if lvl <= 11 and body[4] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"rightLeg": 100}})
-                        return [attack, rl, heal]
+                        return [attack, round(rl), round(rlh)]
                     if lvl > 11 and lvl <= 17 and body[4] > 150:
                         users.update_one({"_id": self.uid}, {"$set": {"rightLeg": 150}})
-                        return [attack, rl, heal]
+                        return [attack, round(rl), round(rlh)]
                     if lvl > 11 and lvl <= 23 and body[4] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"rightLeg": 200}})
-                        return [attack, rl, heal]
+                        return [attack, round(rl), round(rlh)]
                     if enBody[4] <= 0 or attack >= enBody[4]:
                         users.update_one({"_id": enId}, {"set": {"rightLeg": 1}})
-                        return [attack, 1, heal]
-                    return [attack, rl, heal]
+                        return [attack, 1, round(rlh)]
+                    return [attack, round(rl), round(rlh)]
 
                 if aim == "Лв. нога":
                     ll = enBody[5] - attack
+                    llh = body[5] + heal
                     users.update_one({"_id": enId}, {"$set": {"leftLeg": round(ll)}})
-                    users.update_one({"_id": self.uid}, {"$set": {"leftLeg": body[5] + heal}})
+                    users.update_one({"_id": self.uid}, {"$set": {"leftLeg": round(llh)}})
                     if lvl <= 11 and body[5] > 100:
                         users.update_one({"_id": self.uid}, {"$set": {"leftLeg": 100}})
-                        return [attack, ll, heal]
+                        return [attack, round(ll), round(llh)]
                     if lvl > 11 and lvl <= 17 and body[5] > 150:
                         users.update_one({"_id": self.uid}, {"$set": {"leftLeg": 150}})
-                        return [attack, ll, heal]
+                        return [attack, round(ll), round(llh)]
                     if lvl > 11 and lvl <= 23 and body[5] > 200:
                         users.update_one({"_id": self.uid}, {"$set": {"leftLeg": 200}})
-                        return [attack, ll, heal]
+                        return [attack, round(ll), round(llh)]
                     if enBody[5] <= 0 or attack >= enBody[5]:
                         users.update_one({"_id": enId}, {"$set": {"leftLeg": 1}})
-                        return [attack, 1, heal]
-                    return [attack, ll, heal]
+                        return [attack, 1, round(llh)]
+                    return [attack, round(ll), round(llh)]
             else:
                 return False
