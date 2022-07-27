@@ -250,34 +250,34 @@ class Battle:
 
             #Fire
             if spiritual[0] >= 5 and spiritual[0] < 20:
-                attack += param[1] * 1.5
+                attack += param[1] * 1.5 + 2
                 attack -= attack * spiritdef
             if spiritual[0] >= 20 and spiritual[0] < 30:
-                attack += param[1] * 2
+                attack += param[1] * 2 + 2
                 attack -= attack * spiritdef
             if spiritual[0] >= 30 and spiritual[0] < 40:
-                attack += param[1] * 3
+                attack += param[1] * 3 + 2
                 attack -= attack * spiritdef
             if spiritual[0] >= 40 and spiritual[0] < 50:
-                attack += param[1] * 4
+                attack += param[1] * 4 + 4
                 attack -= attack * spiritdef
             if spiritual[0] >= 50 and spiritual[0] < 60:
-                attack += param[1] * 5
+                attack += param[1] * 5 + 4
                 attack -= attack * spiritdef
             if spiritual[0] >= 60 and spiritual[0] < 70:
-                attack += param[1] * 6
+                attack += param[1] * 6 + 4
                 attack -= attack * spiritdef
             if spiritual[0] >= 70 and spiritual[0] < 80:
-                attack += param[1] * 7
+                attack += param[1] * 7 + 6
                 attack -= attack * spiritdef
             if spiritual[0] >= 80 and spiritual[0] < 90:
-                attack += param[1] * 8
+                attack += param[1] * 8 + 6
                 attack -= attack * spiritdef
             if spiritual[0] >= 90 and spiritual[0] < 100:
-                attack += param[1] * 9
+                attack += param[1] * 9 + 6
                 attack -= attack * spiritdef
             if spiritual[0] == 100:
-                attack += param[1] * 10
+                attack += param[1] * 10 + 10
                 attack -= attack * spiritdef
 
             #Water
@@ -315,34 +315,34 @@ class Battle:
             #lightning
             if spiritual[2] >= 5 and spiritual[2] < 20:
                 attack += param[1] * 1.5
-                attack -= attack * spiritdef
+                attack -= attack * (spiritdef - 0.3)
             if spiritual[2] >= 20 and spiritual[2] < 30:
                 attack += param[1] * 2
-                attack -= attack * spiritdef
+                attack -= attack * (spiritdef - 0.3)
             if spiritual[2] >= 30 and spiritual[2] < 40:
                 attack += param[1] * 3
-                attack -= attack * spiritdef
+                attack -= attack * (spiritdef - 0.3)
             if spiritual[2] >= 40 and spiritual[2] < 50:
                 attack += param[1] * 4
-                attack -= attack * spiritdef
+                attack -= attack * (spiritdef - 0.5)
             if spiritual[2] >= 50 and spiritual[2] < 60:
                 attack += param[1] * 5
-                attack -= attack * spiritdef
+                attack -= attack * (spiritdef - 0.5)
             if spiritual[2] >= 60 and spiritual[2] < 70:
                 attack += param[1] * 5
-                attack -= attack * spiritdef
+                attack -= attack * (spiritdef - 0.5)
             if spiritual[2] >= 70 and spiritual[2] < 80:
                 attack += param[1] * 6
-                attack -= attack * spiritdef
+                attack -= attack * (spiritdef - 0.8)
             if spiritual[2] >= 80 and spiritual[2] < 90:
                 attack += param[1] * 7
-                attack -= attack * spiritdef
+                attack -= attack * (spiritdef - 0.8)
             if spiritual[2] >= 90 and spiritual[2] < 100:
                 attack += param[1] * 8
-                attack -= attack * spiritdef
+                attack -= attack * (spiritdef - 0.9)
             if spiritual[2] == 100:
                 attack += param[1] * 15
-                attack -= attack * spiritdef
+                attack -= attack * (spiritdef - 1.5)
 
             #Wind
             if spiritual[3] >= 5 and spiritual[3] < 20:
