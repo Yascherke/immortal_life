@@ -135,7 +135,7 @@ async def battle(message: types.Message):
     getter = msg.replace(' в ', ',').split(',')
     res = battle.fight(getter)
     if res != False:
-        await message.answer(f"{getter[0]} получил урон в {getter[1]} на {res[0]} единиц от {user[0]} \nЗдоровья осталось: {res[1]} \nЗдоровья похищенно: {res[2]}")
+        await message.answer(f"{getter[0]} получил урон в {getter[1]} на {res[0]} единиц от {user[0]} \nЗдоровья осталось: {res[1]} \nЗдоровья похищенно: {res[2]} \nЭнергии похищенно: {res[3]} \nЗащита увеличена: {res[4]}")
     else:
         await message.answer("Цель уклонилась")
 
