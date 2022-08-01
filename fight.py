@@ -442,69 +442,69 @@ class Battle:
 
             #Light
             if spiritual[6] >= 5 and spiritual[6] < 20:
-                attack += param[1] * 2
+                attack += param[1] * 1
             if spiritual[6] >= 20 and spiritual[6] < 30:
-                attack += param[1] * 3
+                attack += param[1] * 2
             if spiritual[6] >= 30 and spiritual[6] < 40:
-                attack += param[1] * 5
+                attack += param[1] * 2
             if spiritual[6] >= 40 and spiritual[6] < 50:
-                attack += param[1] * 7
+                attack += param[1] * 4
             if spiritual[6] >= 50 and spiritual[6] < 60:
-                attack += param[1] * 9
+                attack += param[1] * 5
                 getDef += 0.1
                 getSpir += 0.1
             if spiritual[6] >= 60 and spiritual[6] < 70:
-                attack += param[1] * 10
+                attack += param[1] * 8
                 getDef += 0.1
                 getSpir += 0.1
             if spiritual[6] >= 70 and spiritual[6] < 80:
-                attack += param[1] * 12
+                attack += param[1] * 9
                 getDef += 0.2
                 getSpir += 0.2
             if spiritual[6] >= 80 and spiritual[6] < 90:
-                attack += param[1] * 14
+                attack += param[1] * 10
                 getDef += 0.3
                 getSpir += 0.3
             if spiritual[6] >= 90 and spiritual[6] < 100:
-                attack += param[1] * 16
+                attack += param[1] * 12
                 getDef += 0.4
                 getSpir += 0.4
             if spiritual[6] == 100:
-                attack += param[1] * 18
+                attack += param[1] * 15
                 getDef += 0.5
                 getSpir += 0.5
 
 
             #Dark
             if spiritual[7] >= 5 and spiritual[7] < 20:
-                attack += param[1] * 2
+                attack += param[1] * 1
                 exp += 100
             if spiritual[7] >= 20 and spiritual[7] < 30:
-                attack += param[1] * 4
+                attack += param[1] * 2
                 exp += 200
             if spiritual[7] >= 30 and spiritual[7] < 40:
-                attack += param[1] * 6
+                attack += param[1] * 3
                 exp += 300
             if spiritual[7] >= 40 and spiritual[7] < 50:
-                attack += param[1] * 8
+                attack += param[1] * 5
                 exp += 400
             if spiritual[7] >= 50 and spiritual[7] < 60:
-                attack += param[1] * 10
+                attack += param[1] * 5
                 exp += 500
             if spiritual[7] >= 60 and spiritual[7] < 70:
-                attack += param[1] * 12
+                attack += param[1] * 5
                 exp += 600
             if spiritual[7] >= 70 and spiritual[7] < 80:
-                attack += param[1] * 14
+                attack += param[1] * 10
                 exp += 700
             if spiritual[7] >= 80 and spiritual[7] < 90:
-                attack += param[1] * 16
+                attack += param[1] * 10
                 exp += 800
             if spiritual[7] >= 90 and spiritual[7] < 100:
-                attack += param[1] * 18
+                attack += param[1] * 10
                 exp += 900
             if spiritual[7] == 100:
-                attack += param[1] * 20
+                attack += param[1] * 15
                 exp += 1000
 
             if rand >= evade:

@@ -252,6 +252,11 @@ async def cmds(message: types.Message):
         else:
             await message.answer("Недостаточно энергии")
 
+    if message.text == "Отдых":
+        
+        regen = system.regen()
+        await message.answer(f"{param[0]} восстановили себе {regen} здоровья")
+
 
 
 if __name__ == '__main__':
