@@ -495,16 +495,16 @@ class Battle:
                 attack += param[1] * 5
                 exp += 600
             if spiritual[7] >= 70 and spiritual[7] < 80:
-                attack += param[1] * 10
+                attack += param[1] * 8
                 exp += 700
             if spiritual[7] >= 80 and spiritual[7] < 90:
-                attack += param[1] * 10
+                attack += param[1] * 8
                 exp += 800
             if spiritual[7] >= 90 and spiritual[7] < 100:
                 attack += param[1] * 10
                 exp += 900
             if spiritual[7] == 100:
-                attack += param[1] * 15
+                attack += param[1] * 12
                 exp += 1000
 
             if rand >= evade:
